@@ -4,3 +4,9 @@ Python + React Microservices Web App - following this [YouTube tutorial]( https:
 Using [React Frontend](https://github.com/spencerlepine/microservices-practice-react)
 
 ![Architecture Diagram](./Architecture.png)
+
+# Run the admin
+```sh
+cd admin
+docker-compose up
+```
