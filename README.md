@@ -5,7 +5,11 @@ Using [React Frontend](https://github.com/spencerlepine/microservices-practice-r
 
 ![Architecture Diagram](./Architecture.png)
 
-# Run the admin
+# Setup
+```sh
+cd rabbit
+docker-compose up
+```
 ```sh
 cd admin
 docker-compose up
