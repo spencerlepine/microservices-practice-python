@@ -1,9 +1,13 @@
-from flask import Flask
+from dataclasses import dataclass
+from flask import Flask, jsonify, abort
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import UniqueConstraint
+# import requests
 
 app = Flask(__name__)
-app.config["SQL_DATABSE_URI"] = 'mysql://root:root@db/main'
+app.config["SQLALCHEMY_DATABASE_URI"] = 'mysql://root:root@db/main'
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = 'False'
 CORS(app)
 
 db = SQLAlchemy(app)
