@@ -12,13 +12,13 @@ services:
     depends_on:
       - db
 
-  # queue:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   command: 'python -u consumer.py'
-  #   depends_on:
-  #     - db
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'python -u consumer.py'
+    depends_on:
+      - db
 
   db:
     platform: linux/amd64 # Fix for my M1 Chip Mac
